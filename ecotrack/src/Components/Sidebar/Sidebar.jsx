@@ -81,13 +81,7 @@ const Sidebar = () => {
                     </li>
                     </Link>
 
-                    <p className="title"></p>
-                    <Link className="custom-link">
-                    <li>
-                        <AdminPanelSettingsIcon className="icon" />
-                        <span>Setting</span>
-                    </li>
-                    </Link>
+                    
 
                 </ul>
             </div> 

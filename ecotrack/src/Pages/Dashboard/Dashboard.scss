@@ -57,8 +57,24 @@
             gap: 10px;
             margin-top: 10px;
             margin-left: 1em;
+        }
+
+        .right1-divContent{
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
           
-            
+            margin-left: 1em;
+        }
+
+        .totalGarbage {
+          text-align: center;
+          font-size: 16px;
+          color: #2e4374;
+          margin-bottom: 20px;
+          
         }
 
         .map-div{

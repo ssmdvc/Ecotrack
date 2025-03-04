@@ -10,7 +10,6 @@ import {
   BarChart,
   XAxis,
   YAxis,
-  Legend,
   CartesianGrid,
   Bar,
   PieChart,
@@ -19,12 +18,19 @@ import {
 } from "recharts";
 
 const Dashboard = () => {
-  const data = [
-    { name: "2020", value: 3000 },
-    { name: "2021", value: 15000 },
-    { name: "2022", value: 100000 },
-    { name: "2023", value: 500000 },
+  // Sample data for the bar chart (garbage collected over a week)
+  const weeklyGarbageData = [
+    { day: "Monday", garbage: 1200 },
+    { day: "Tuesday", garbage: 1500 },
+    { day: "Wednesday", garbage: 800 },
+    { day: "Thursday", garbage: 2000 },
+    { day: "Friday", garbage: 2200 },
+    { day: "Saturday", garbage: 2500 },
+    { day: "Sunday", garbage: 3000 },
   ];
+
+  // Calculate the total garbage collected over the week
+  const totalGarbageCollected = weeklyGarbageData.reduce((total, day) => total + day.garbage, 0);
 
   const truckData = [
     { id: "CY0987", driver: "Ronaldo Cruz", phone: "09274580033", status: "Active" },
@@ -88,43 +94,40 @@ const Dashboard = () => {
         <div className='section2'>
           <div className="right1-div"> 
             <div className="right1-divContent">
-              <h2> Amount of Garbage Collected </h2>
+              <h2>Garbage Collected this Week </h2>
               <BarChart
-                width={700}
-                height={250}
-                data={data}
+                width={800}
+                height={200}
+                data={weeklyGarbageData}
                 margin={{
                   top: 5,
                   right: 30,
-                  left: 120,
-                  bottom: 5,
+                  left: 20,
+                  bottom: 20, // Increased bottom margin to ensure X-axis labels are visible
                 }}
-                barSize={20}
               >
-                <XAxis
-                  dataKey="name"
-                  scale="point"
-                  padding={{ left: 30, right: 30 }}
-                />
-                <YAxis />
-                <Tooltip />
-                <Legend />
                 <CartesianGrid strokeDasharray="3 3" />
-                <Bar dataKey="value" fill="#8884d8" background={{ fill: "#eee" }} />
+                <XAxis dataKey="day" />
+                <YAxis 
+                  label={{ value: "", angle: -90, position: "insideLeft", dy: 50 }}
+                  tickFormatter={(value) => `${value} kg`} 
+                />
+                <Tooltip />
+                <Bar dataKey="garbage" fill="#8884d8" />
               </BarChart>
+              <div className="totalGarbage">
+                <p>Total Garbage Collected This Week: {totalGarbageCollected} kg</p>
+              </div>
             </div>
           </div>
-
-             
-          
 
           <div className="left1-div">
             <div className="Track-div">
               <div className="card">
-                <h3>Weekly Garbage Tracking</h3>
+                <h3>View Garbage Analytics</h3>
 
                 {/* Donut chart */}
-             <PieChart width={300} height={150}>
+                <PieChart width={300} height={150}>
                   <Pie
                     data={[
                       { name: "Collected", value: 98}, // dynamic data when connected to the backend
@@ -144,8 +147,6 @@ const Dashboard = () => {
                 </PieChart>
                 
                 <p className="totalCollected">Total Collected Today</p>
-
-               
 
                 <div className="trackingStats">
                   <div>
