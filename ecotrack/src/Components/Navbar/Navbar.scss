@@ -5,79 +5,75 @@
     align-items: center;
     font-size: 14px;
     color: #555;
+}
 
-    .nav-wrapper{
-        width: 100%;
-        height: 5em;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+.nav-wrapper{
+    width: 100%;
+    height: 5em;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
        
         
-
-        .items{
-            display: flex;
-            align-items: center;
-            width:20em;
-        }
-
-            
-            .item{
-                display: flex;
-                align-items: center;
-                margin-right: 25px;
-                width: 30px;
-                height: 25px;
-                         
-            }
-
-            .item1{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 25px;
-                width: 45px;
-                height: 30px;
-                background-color:#2B3674;  
-                border-radius: 20px;            
-            }
-
+.items{
+    display: flex;
+    align-items: center;
+    width: 10%;
     
-                .nav-icon{
-                    color: #A3AED0;
-                    font-size: 23px;
-                    cursor: pointer;
-                }
-                
-                .avatar{
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    cursor: pointer;
-                }
+    height: 150%;
+    
+
+}
+        
+
             
-        }
-        .line{
-            height:35px;
-            width: 1px;
-            background-color: #191B1F;
-            margin-right: 1.5em;
-        }
+                
+.item1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background-color:#2B3674;  
+    border-radius: 20px;   
+           
+}
 
-        .adminName{
-            width: 10em;
-            height: 4.20em;
-            line-height: 5px;
-        }
 
-        .administrator1{
-            color: #2B3674;
-            font-weight: bold;
-        }
+
+.nav-icon{
+    color: #A3AED0;
+    font-size: 15%;
+    cursor: pointer;
+}
+                
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+   
+    margin-left: 30%;
+    margin-top: 5%;
+}
+            
+        
+.line{
+    height:100%;
+    width: 1%;
+    background-color: #191B1F;
+   
+}        
+
+      
 
         
         
-    }
+    

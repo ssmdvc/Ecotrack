@@ -23,14 +23,8 @@ const [openProfile, setOpenProfile] = useState(false);
                      onClick={()=>dispatch({type:"TOGGLE"})} />
                     </div>
 
-                    <div className="item1">
-                     <NotificationsNoneOutlinedIcon className="nav-icon" 
-                      />
-                    </div>
 
-                    <div className="line">
-        
-                    </div>
+                    <div className="line"></div>
 
 
                     <div className="item">
@@ -45,15 +39,6 @@ const [openProfile, setOpenProfile] = useState(false);
                     {
                         openProfile && <Dropdown /> 
                     }
-
-                    <div className="adminName">
-                        <div className="administrator1">
-                        <p>Admin</p>
-                        </div>
-                        <div className="administrator">
-                        <p>Administrator</p>
-                        </div>
-                    </div>
 
 
                 </div>
